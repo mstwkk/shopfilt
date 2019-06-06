@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<input type="" class="input">
+		<button class="btn btn-success">Поиск</button>
+		<img src="cart.png" style="height: 35px; width: 35px; margin-left: 600px;">
+		<div class="row"></div>
+	</div>
+<script>
+	let row = document.querySelector(".row");
+	let input = document.querySelector(".input");
+	let btn = document.querySelector(".btn");
+
+	let array =[
+		{
+			name:"Куртка",
+			price:10000,
+			url:"kurtka.jpg",
+			brand:"h&m",
+			size:"M",
+			gender:"Female"
+		},
+		{
+			name:"Джинсы",
+			price:8000,
+			url:"5.jpg",
+			brand:"levi's",
+			size:"L",
+			gender:"Male"
+		},
+		{
+			name:"Джинсы",
+			price:2500,
+			url:"jeanse1.jpg",
+			brand:"zara",
+			size:"M",
+			gender:"Female"
+		},
+		{
+			name:"Джинсы",
+			price:3500,
+			url:"jeanse2.jpg",
+			brand:"zara",
+			size:"L",
+			gender:"Female"
+		},
+		{
+			name:"Футболка",
+			price:1200,
+			url:"tshirt2.jpg",
+			brand:"asics",
+			size:"L",
+			gender:"Male"
+		},
+		{
+			name:"Футболка",
+			price:900,
+			url:"tshirt.jpg",
+			brand:"h&m",
+			size:"XS",
+			gender:"Female"
+		},
+		{
+			name:"Куртка",
+			price:15000,
+			url:"20.jpg",
+			brand:"the north face",
+			size:"L",
+			gender:"Male"
+		},
+		{
+			name:"Шапка",
+			price:900,
+			url:"9.jpg",
+			brand:"nike",
+			size:"nosize",
+			gender:"Male"
+		},
+		{
+			name:"Носки",
+			price:500,
+			url:"socks.jpg",
+			brand:"bonprix",
+			size:"nosize",
+			gender:"Male"
+		},
+	];
+	for(let index = 0; index<9; index = index + 1){
+			let div = document.createElement("div")
+			row.appendChild(div)
+			let img = document.createElement("img")
+			div.appendChild(img)
+			div.classList.add("divclick")
+			img.src = array[index].url
+			div.classList.add("col-3")
+			img.classList.add("w-100")
+			img.classList.add("h-50")
+			div.classList.add("border")
+			let name = document.createElement("p")
+			let brand = document.createElement("p")
+			let price = document.createElement("p")
+			let size = document.createElement("p")
+			let gender = document.createElement("p")
+			div.appendChild(name)
+			div.appendChild(price)
+			div.appendChild(brand)
+			div.appendChild(size)
+			div.appendChild(gender)
+
+			name.innerHTML = array[index].name
+			price.innerHTML = "Цена: " + array[index].price + " рублей"
+			brand.innerHTML = "Бренд: " + array[index].brand
+			size.innerHTML = "Размер: " + array[index].size
+			gender.innerHTML = "Для: " + array[index].gender
+	}
+	btn.onclick = function(){
+		row.innerHTML = ""
+		for(let index = 0; index<9; index = index + 1){
+			if(input.value == array[index].gender){
+				let div = document.createElement("div")
+				row.appendChild(div)
+				let img = document.createElement("img")
+				div.appendChild(img)
+				img.src = array[index].url
+				div.classList.add("col-3")
+				img.classList.add("w-100")
+				img.classList.add("h-50")
+				div.classList.add("border")
+				let name = document.createElement("p")
+				let brand = document.createElement("p")
+				let price = document.createElement("p")
+				let size = document.createElement("p")
+				let gender = document.createElement("p")
+				div.appendChild(name)
+				div.appendChild(price)
+				div.appendChild(brand)
+				div.appendChild(size)
+				div.appendChild(gender)
+
+				name.innerHTML = array[index].name
+				price.innerHTML = "Цена: " + array[index].price + " рублей"
+				brand.innerHTML = "Бренд: " + array[index].brand
+				size.innerHTML = "Размер: " + array[index].size
+				gender.innerHTML = "Для: " + array[index].gender
+			}
+			if(input.value == array[index].size){
+				let div = document.createElement("div")
+				row.appendChild(div)
+				let img = document.createElement("img")
+				div.appendChild(img)
+				img.src = array[index].url
+				div.classList.add("col-3")
+				img.classList.add("w-100")
+				img.classList.add("h-50")
+				div.classList.add("border")
+				let name = document.createElement("p")
+				let brand = document.createElement("p")
+				let price = document.createElement("p")
+				let size = document.createElement("p")
+				let gender = document.createElement("p")
+				div.appendChild(name)
+				div.appendChild(price)
+				div.appendChild(brand)
+				div.appendChild(size)
+				div.appendChild(gender)
+
+				name.innerHTML = array[index].name
+				price.innerHTML = "Цена: " + array[index].price + " рублей"
+				brand.innerHTML = "Бренд: " + array[index].brand
+				size.innerHTML = "Размер: " + array[index].size
+				gender.innerHTML = "Для: " + array[index].gender
+			}
+			if(input.value == array[index].brand){
+				let div = document.createElement("div")
+				row.appendChild(div)
+				let img = document.createElement("img")
+				div.appendChild(img)
+				img.src = array[index].url
+				div.classList.add("col-3")
+				img.classList.add("w-100")
+				img.classList.add("h-50")
+				div.classList.add("border")
+				let name = document.createElement("p")
+				let brand = document.createElement("p")
+				let price = document.createElement("p")
+				let size = document.createElement("p")
+				let gender = document.createElement("p")
+				div.appendChild(name)
+				div.appendChild(price)
+				div.appendChild(brand)
+				div.appendChild(size)
+				div.appendChild(gender)
+
+				name.innerHTML = array[index].name
+				price.innerHTML = "Цена: " + array[index].price + " рублей"
+				brand.innerHTML = "Бренд: " + array[index].brand
+				size.innerHTML = "Размер: " + array[index].size
+				gender.innerHTML = "Для: " + array[index].gender
+			}
+			if(input.value == array[index].price){
+				let div = document.createElement("div")
+				row.appendChild(div)
+				let img = document.createElement("img")
+				div.appendChild(img)
+				img.src = array[index].url
+				div.classList.add("col-3")
+				img.classList.add("w-100")
+				img.classList.add("h-50")
+				div.classList.add("border")
+				let name = document.createElement("p")
+				let brand = document.createElement("p")
+				let price = document.createElement("p")
+				let size = document.createElement("p")
+				let gender = document.createElement("p")
+				div.appendChild(name)
+				div.appendChild(price)
+				div.appendChild(brand)
+				div.appendChild(size)
+				div.appendChild(gender)
+
+				name.innerHTML = array[index].name
+				price.innerHTML = "Цена: " + array[index].price + " рублей"
+				brand.innerHTML = "Бренд: " + array[index].brand
+				size.innerHTML = "Размер: " + array[index].size
+				gender.innerHTML = "Для: " + array[index].gender
+			}
+			if(input.value == array[index].name){
+				let div = document.createElement("div")
+				row.appendChild(div)
+				let img = document.createElement("img")
+				div.appendChild(img)
+				img.src = array[index].url
+				div.classList.add("col-3")
+				img.classList.add("w-100")
+				img.classList.add("h-50")
+				div.classList.add("border")
+				let name = document.createElement("p")
+				let brand = document.createElement("p")
+				let price = document.createElement("p")
+				let size = document.createElement("p")
+				let gender = document.createElement("p")
+				div.appendChild(name)
+				div.appendChild(price)
+				div.appendChild(brand)
+				div.appendChild(size)
+				div.appendChild(gender)
+
+				name.innerHTML = array[index].name
+				price.innerHTML = "Цена: " + array[index].price + " рублей"
+				brand.innerHTML = "Бренд: " + array[index].brand
+				size.innerHTML = "Размер: " + array[index].size
+				gender.innerHTML = "Для: " + array[index].gender
+			}
+		}
+	}
+
+</script>
+</body>
+</html>
